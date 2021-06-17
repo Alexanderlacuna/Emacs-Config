@@ -66,7 +66,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(material-theme better-defaults)))
+ '(package-selected-packages '(rust-mode material-theme better-defaults)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -84,3 +84,30 @@
 (when (require 'flycheck nil t)
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+
+
+;;rust config
+
+(require 'rust-mode)
+
+;;indentation using spaces
+(add-hook 'rust-mode-hook
+          (lambda () (setq indent-tabs-mode nil)))
+
+
+
+;;rust formatt code  c-c c-f
+
+(setq rust-format-on-save t)
+
+
+;;running testing compiling code key binding
+
+(define-key rust-mode-map (kbd "C-c C-r") 'rust-run)
+(define-key rust-mode-map (kbd "C-c C-c") 'rust-check)
+
+;;should add a binding for rust-run-clippy
+
+
+
