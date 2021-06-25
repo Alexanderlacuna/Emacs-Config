@@ -66,7 +66,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(rust-mode material-theme better-defaults)))
+ '(package-selected-packages '(haskell-mode rust-mode material-theme better-defaults)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -111,3 +111,25 @@
 
 
 
+;;haskell setup  install haskell-mode
+
+(add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
+
+;; hslint on the command line only likes this indentation mode;
+;; alternatives commented out below.
+
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
+
+
+;; Ignore compiled Haskell files in filename completions
+(add-to-list 'completion-ignored-extensions ".hi")
+
+
+;;ad hslint ;;cabal install hlint
+
+(require 'hs-lint)
+(defun my-haskell-mode-hook ()
+    (local-set-key "\C-cl" 'hs-lint))
+(add-hook 'haskell-mode-hook 'my-haskell-mode-hook)
