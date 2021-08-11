@@ -8,6 +8,7 @@ https://github.com/Alexanderlacuna/Emacs-Config.git;;emacs.d/init.el
 
 ;;initializes the package infrastructure
 
+;;magit status trial
 (package-initialize)
 
 
