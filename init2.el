@@ -1,6 +1,6 @@
 ;;playground for emacs 2
 
-https://github.com/Alexanderlacuna/Emacs-Config.git;;emacs.d/init.el
+
 (require 'package)
 
 (add-to-list 'package-archives
