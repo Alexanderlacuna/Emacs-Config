@@ -1,4 +1,9 @@
-(tool-bar-mode 0)
 (menu-bar-mode t)
+(tool-bar-mode 0)
+(setq-default cursor-type 'bar)
+(set-cursor-color "#ffffff")
+;;(global-linum-mode t)
+(global-display-line-numbers-mode t)
+(set-face-foreground 'line-number "red")
+(set-window-margins nil 1) 
 (provide 'appearance)
-
