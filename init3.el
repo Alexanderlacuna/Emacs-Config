@@ -21,6 +21,7 @@
     elpy
     flycheck
     py-autopep8
+    eglot
     )
   )
 
@@ -32,7 +33,9 @@
 
 (load-theme 'monokai-pro-classic  t)
 
+
 (require 'python_config)
+
 
 ;;rust configs
 (custom-set-variables
