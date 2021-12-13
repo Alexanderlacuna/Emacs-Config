@@ -5,5 +5,6 @@
 ;;(global-linum-mode t)
 (global-display-line-numbers-mode t)
 (set-face-foreground 'line-number "red")
-(set-window-margins nil 1) 
+(set-window-margins nil 1)
+(show-paren-mode 1)
 (provide 'appearance)
