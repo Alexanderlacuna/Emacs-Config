@@ -7,4 +7,5 @@
 (set-face-foreground 'line-number "red")
 (set-window-margins nil 1)
 (show-paren-mode 1)
+(set-face-attribute 'show-paren-match nil :foreground "coral" :underline t)
 (provide 'appearance)
