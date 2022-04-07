@@ -2,7 +2,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/settings")
 
-(require 'rust_config)
+
 
 (require 'appearance)
 (add-to-list 'package-archives
@@ -35,7 +35,7 @@
 
 
 (require 'python_config)
-
+(require 'rust_config)
 
 ;;rust configs
 (custom-set-variables
