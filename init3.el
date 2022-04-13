@@ -22,6 +22,7 @@
     flycheck
     py-autopep8
     eglot
+    use-package
     )
   )
 
@@ -36,6 +37,7 @@
 
 (require 'python_config)
 (require 'rust_config)
+
 
 ;;rust configs
 (custom-set-variables
